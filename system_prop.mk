@@ -19,10 +19,6 @@
 # System Properties for Realme 1: CPH1859
 #
 
-# Pixel identification
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.build.fingerprint=google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys
-
 # LCD density
 ro.sf.lcd_density=480
 
