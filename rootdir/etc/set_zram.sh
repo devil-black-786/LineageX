@@ -3,8 +3,8 @@
 # Setup ZRAM
 swapoff /dev/block/zram0
 sleep 0.5
-#ZMEM=$(cat /proc/meminfo | grep MemTotal | awk  '{print $2}')
-let 'ZMEM=2415919104'
+ZMEM=$(cat /proc/meminfo | grep MemTotal | awk  '{print $2}')
+let 'ZMEM=((ZMEM/100)*60)*1024'
 echo 1 > /sys/block/zram0/reset
 echo 'lz4' > /sys/block/zram0/comp_algorithm
 sleep 0.5
